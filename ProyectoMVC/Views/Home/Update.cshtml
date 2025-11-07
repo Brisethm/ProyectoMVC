@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Update";
+}
+
+<form method="post" action="/Home/Update">
+
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="CategoryID" name="CategoryID" placeholder="ID">
+        <label for="CategoryID">CategoryID*</label>
+    </div>
+
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="CategoryName" name="CategoryName" placeholder="Nombre">
+        <label for="CategoryName">CategoryName*</label>
+    </div>
+
+    <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="Description" name="Description" placeholder="Descripción">
+        <label for="Description">Description*</label>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Actualizar</button>
+</form>
+
+@if(ViewBag.Mensaje != null)
+{
+    <div class="alert alert-success mt-3">@ViewBag.Mensaje</div>
+}

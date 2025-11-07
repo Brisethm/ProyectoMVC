@@ -1,0 +1,41 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">¡Bienvenido a la gestión de categorías de Northwind!</h1> <br />
+    <p class="h3">¿Qué desea hacer hoy?</p>
+
+    <div class="d-flex justify-content-center gap-3 mt-4">
+
+        <div class="card" style="width: 18rem;">
+            <img src="~/images/Update.png" class="card-img-top" alt="Update Image">
+            <div class="card-body">
+                <h5 class="card-title">Actualización</h5>
+                <p class="card-text">Actualizar un dato de categorías</p>
+                <a asp-controller="Home" asp-action="Update" class="btn btn-primary">Actualizar</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <img src="~/images/Delete.jpg" class="card-img-top" alt="Delete Image">
+            <div class="card-body">
+                <h5 class="card-title">Eliminación</h5>
+                <p class="card-text">Eliminar un dato de categorías</p>
+                <a href="#" class="btn btn-primary">Eliminar</a>
+            </div>
+        </div>
+
+        <div class="card" style="width: 18rem;">
+            <img src="~/images/View.png" class="card-img-top" alt="View Image">
+            <div class="card-body">
+                <h5 class="card-title">Consulta</h5>
+                <p class="card-text">Ver un dato de categorías</p>
+                <a href="#" class="btn btn-primary">Consultar</a>
+            </div>
+        </div>
+
+    </div>
+
+    <p class="mt-4">Este programa fue hecho por Briseth Marin</p>
+</div>
