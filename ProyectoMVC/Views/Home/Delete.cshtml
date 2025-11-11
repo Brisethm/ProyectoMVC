@@ -1,0 +1,17 @@
+@{
+    ViewData["Title"] = "Eliminar Categoría";
+}
+
+<h2 class="text-center">Eliminación de Categorías</h2>
+
+<form asp-action="Delete" method="post" class="mb-3">
+    <div class="form-floating mb-3">
+        <input type="number" class="form-control" id="CategoryID" name="CategoryID" placeholder="ID" required />
+        <label for="CategoryID">CategoryID</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Eliminar</button>
+</form>
+@if(ViewBag.Mensaje != null)
+{
+    <div class="alert alert-info mt-3">@ViewBag.Mensaje</div>
+}

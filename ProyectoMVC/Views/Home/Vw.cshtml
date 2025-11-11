@@ -1,0 +1,38 @@
+@{
+    ViewData["Title"] = "Consulta";
+}
+
+<h2 class="text-center">Consulta de Categorías</h2>
+
+<form method="get" asp-action="Vw" class="mb-3">
+    <div class="form-floating mb-3">
+        <input type="number" class="form-control" id="CategoryID" name="CategoryID" placeholder="ID">
+        <label for="CategoryID">CategoryID</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Consultar</button>
+</form>
+
+@if (Model != null && Model.Count > 0)
+{
+    <table class="table table-striped mt-3">
+        <thead>
+            <tr>
+                <th>CategoryID</th>
+                <th>CategoryName</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var cat in Model)
+            {
+                <tr>
+                    <td>@cat.CategoryID</td>
+                    <td>@cat.CategoryName</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else if (Model != null && Model.Count == 0)
+{
+    <div class="alert alert-info mt-3">No hay registros para mostrar.</div>
+}
